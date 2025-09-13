@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.section1 {
+      display: flex;
+      align-items: center;   /* vertically center */
+      justify-content: space-between;
+      padding: 60px;
+      max-width: 100%;
+      margin: auto;
+    }
+
+    .text {
+      flex: 1;               /* takes remaining space */
+      padding-right: 20px;
+    }
+
+    .text h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+      color: #012107;
+    }
+
+    .text p {
+      font-size: 2.1rem;
+      color: #555;
+    }
+
+    .image {
+      flex: 1;
+      text-align: right;      /* push image to right */
+    }
+
+    .image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .work-section {
+  padding: 60px;  /* exactly like .section1 */
+  margin: auto;
+}
+
+
+.section-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #012107;
+  text-align: center;        /* center align */
+  margin: 20px 0 15px 0;     /* balanced spacing */
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #ff6600;       /* solid orange accent */
+  margin: 8px auto 0;        /* space between text & underline */
+  border-radius: 2px;
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 images per row */
+  gap: 20px;
+  padding: 0 60px; /* same left-right padding as section1 */
+  margin-bottom: 60px;
+}
+
+.work-item img {
+  width: 100%;
+  height: 220px;  /* fixed height for uniform grid */
+  object-fit: cover; /* crop images neatly */
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work-item img:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.about-section {
+  width: 100%;                 /* Full width container */
+  padding: 50px 20px;           /* Top-bottom & side padding */
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.about-section .section-title {
+  font-size: 2rem;
+  color: #012107;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.about-section .section-title::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #ff6600;
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+.about-text {
+  width: 70%;                  /* Limit text width */
+  margin: 0 auto;              /* Center horizontally */
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.contact-section {
+  width: 100%;
+  padding: 50px 20px;
+  background: #f9f9f9;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+}
+
+.contact-section h2 {
+  font-size: 2rem;
+  color: #012107;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.contact-section h2::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #ff6600;
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+.contact-info-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap to the next line */
+  justify-content: center;
+  max-width: 900px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.contact-item {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-item h3 {
+  font-size: 1.25rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.contact-item p {
+  margin: 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Specific styling for the layout */
+.contact-phone,
+.contact-email {
+  flex-basis: 45%;
+  flex-grow: 1; /* Allows them to grow to fill space */
+}
+
+.contact-address {
+  flex-basis: 100%; /* Forces the address to take up the full width */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .contact-info-container {
+    flex-direction: column; /* Stacks items vertically on smaller screens */
+    align-items: center;
+  }
+
+  .contact-item {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+
+
+
+
+
