@@ -188,18 +188,97 @@
   flex-basis: 100%; /* Forces the address to take up the full width */
 }
 
-/* Responsive adjustments for smaller screens */
+/* 🌐 Responsive Design for Homepage */
+@media (max-width: 1024px) {
+  .section1 {
+    padding: 40px;  /* reduce spacing */
+  }
+
+  .text h1 {
+    font-size: 2.2rem;
+  }
+
+  .text p {
+    font-size: 1.6rem;
+  }
+
+  .work-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 per row */
+  }
+}
+
 @media (max-width: 768px) {
-  .contact-info-container {
-    flex-direction: column; /* Stacks items vertically on smaller screens */
-    align-items: center;
+  .section1 {
+    flex-direction: column;   /* stack text & image */
+    text-align: center;
+    padding: 30px;
+  }
+
+  .text {
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .text h1 {
+    font-size: 2rem;
+  }
+
+  .text p {
+    font-size: 1.2rem;
+  }
+
+  .image {
+    text-align: center;
+  }
+
+  .work-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row */
+    padding: 0 20px;
+  }
+
+  .about-text {
+    width: 90%;   /* wider on mobile */
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section1 {
+    padding: 20px;
+  }
+
+  .text h1 {
+    font-size: 1.6rem;
+  }
+
+  .text p {
+    font-size: 1rem;
+  }
+
+  .work-grid {
+    grid-template-columns: 1fr; /* 1 per row */
+    gap: 15px;
+    padding: 0 15px;
+  }
+
+  .about-text {
+    width: 100%;
+    font-size: 0.9rem;
   }
 
   .contact-item {
-    width: 100%;
-    margin-bottom: 15px;
+    padding: 15px;
+  }
+
+  .contact-item h3 {
+    font-size: 1.1rem;
+  }
+
+  .contact-item p {
+    font-size: 0.9rem;
   }
 }
+
 
 
 

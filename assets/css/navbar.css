@@ -35,3 +35,24 @@
 .nav-links a:hover {
   color: #007BFF; /* blue hover */
 }
+@media (max-width: 768px) {
+  .navbar .container {
+    flex-direction: column;   /* stack logo and links vertically */
+    justify-content: center;
+    align-items: center;
+    gap: 10px;                /* space between logo and navlinks */
+  }
+
+  .logo {
+    font-size: 1.2rem;        /* adjust size if needed */
+  }
+
+  .nav-links {
+    flex-direction: row;      /* keep nav links in one row */
+    gap: 16px;                /* spacing between links */
+  }
+
+  .nav-links a {
+    font-size: 0.9rem;        /* shrink text a bit */
+  }
+}

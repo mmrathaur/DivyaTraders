@@ -65,3 +65,58 @@
   border-radius: 8px;
   object-fit: cover;
 }
+
+/* 📌 Responsive About Section */
+@media (max-width: 1024px) {
+  .products-container {
+    flex-wrap: wrap; /* allow wrapping */
+    gap: 15px;
+  }
+
+  .product {
+    width: 45%; /* two per row on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .about-title {
+    font-size: 1.6rem;
+  }
+
+  .about-intro {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .products-container {
+    flex-direction: column; /* stack vertically */
+    align-items: center;
+  }
+
+  .product {
+    width: 80%; /* bigger card, centered */
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-title {
+    font-size: 1.4rem;
+  }
+
+  .about-intro {
+    font-size: 14px;
+  }
+
+  .product {
+    width: 100%; /* full width on small screens */
+  }
+
+  .product-info h3 {
+    font-size: 18px;
+  }
+
+  .product-info p {
+    font-size: 14px;
+  }
+}
