@@ -1,6 +1,13 @@
 
 .navbar {
+  position: fixed;    
+  top: 0;             
+  left: 0;
+  width: 100%;         
+  background: #fff;    
   padding: 12px 24px;
+  z-index: 1000;       
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Use flexbox for horizontal alignment */
@@ -56,3 +63,4 @@
     font-size: 0.9rem;        /* shrink text a bit */
   }
 }
+
